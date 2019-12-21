@@ -536,6 +536,23 @@ header{
 .elite-info-left h2{
 	font-size: 172px;
 	border-bottom: 1px solid #ff5a00;
+	position: relative;
+}
+.elite-info-left h2:before{
+	content: '';
+	display: block;
+	width: 68px;
+	height: 63px;
+	background-image: url(images/Orchid-flower-icon.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	left: -16px;
+	right: 0;
+	margin: auto;
+	top: 24px;
+	position: absolute;
+	background-color:#fff;
 }
 .elite-info-left h3{
 	font-size: 60px;
@@ -997,6 +1014,11 @@ footer a{
 	.consultation-left{
 		margin: auto;
 		padding: 0 20px;
+	}
+	.elite-info-left h2:before{
+		width: 48px;
+		height: 43px;
+		top: 19px;
 	}
 	.elite-info-left h2{
 		font-size: 125.38px;
