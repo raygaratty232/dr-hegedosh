@@ -413,16 +413,20 @@ main {
     margin-top: 23px;
 }
 
-.book-now-box button {
-    font-size: 24px;
-    color: #00ab9b;
+.slider-btn{
     width: 280px;
     height: 70px;
     border: none;
     margin-top: 42px;
     box-shadow: 1px 1px 2px 0px #000;
+    background-color: #fff;
 }
-
+.slider-btn a{
+	text-align: center;
+	line-height: 70px;
+	font-size: 24px;
+    color: #00ab9b;
+}
 /*main-slider-end*/
 
 /*main start*/
@@ -1462,10 +1466,9 @@ footer a {
         margin-top: 0;
     }
 
-    .book-now-box button {
+    .slider-btn{
         margin-top: 8px;
     }
-
     .procedures-container,
     .header-top,
     .foo-cont,
