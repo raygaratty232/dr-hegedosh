@@ -2,6 +2,8 @@
     src: url('fonts/OpenSansRegular/OpenSansRegular.ttf');
     src: url('fonts/OpenSansRegular/OpenSansRegular.woff');
     font-family: 'OpenSans';
+    font-weight: normal;
+  	font-style: normal;
 }
 
 @font-face {
@@ -114,10 +116,10 @@ button {
     position: relative;
 }
 
-.hover-desk:hover .drop-menu,
+/*.hover-desk:hover .drop-menu,
 .btn-lvl-2:hover .drop-menu-lvl-2 {
     display: block;
-}
+}*/
 
 .hover-desk:hover {
     background-color: #fff;
@@ -126,12 +128,13 @@ button {
 
 .drop-menu li {
     width: 100% !important;
+    box-sizing: border-box;
 }
 
 .drop-menu-lvl-2 {
     background-color: #54c7bc;
     position: absolute;
-    right: -172px;
+    right: -197px;
     top: 0;
 }
 
@@ -157,7 +160,7 @@ button {
 }
 
 .lvl-l {
-    right: -85px;
+    right: -112px;
 }
 
 .drop-menu-lvl-2 li {
@@ -352,7 +355,9 @@ header {
     height: 35px;
     cursor: pointer;
 }
-
+.menu span{
+	display: block;
+}
 .menu>li>a,
 .menu li {
     font-size: 14px;
@@ -450,7 +455,19 @@ main {
     padding-left: 18px;
     padding-top: 15px;
 }
-
+.procedures-left-title-block h2{
+    	position: relative;
+    }
+	.procedures-left-title-block h2:after{
+		content: '';
+		display: block;
+		width: 170px;
+		height: 1px;
+		background-color: #b9b8b8;
+		position: absolute;
+		right: 0;
+		top: 18px;
+	}
 .dr-photo-box {
     position: relative;
 }
@@ -512,6 +529,7 @@ main {
     text-decoration: underline;
     width: 90%;
 	text-align: right;
+	font-family: 'OpenSans-Light-italic';
 }
 
 .procedures-right-title-block h2,
@@ -814,7 +832,7 @@ main {
     margin-top: 69px;
 }
 
-.form-pop-container {
+.form-pop-container, .dr-pop-container{
     position: absolute;
     left: 0;
     right: 0;
@@ -826,7 +844,82 @@ main {
     z-index: 99999;
     display: none;
 }
-
+.form-pop {
+    max-width: 320px;
+	min-height: 160px;
+    background-color: #fff;
+    top: 73%;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 1px #000;
+}
+.dr-pop-title{
+}
+.dr-pop-title h2{
+	color: #00ab9b;
+}
+.dr-pop{
+	max-width: 500px;
+	min-height: 290px;
+	background-color:
+	#fff;
+	top: 35vh;
+	position: relative;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 5px;
+	/*box-shadow: 0px 0px 4px 1px #000;*/
+	padding: 20px;
+	box-shadow: 0px 1px 2px 0px #000;
+}
+.dr-pop-info{
+	padding: 10px;
+	margin-top: 20px;
+	background-color: #00ab9b;
+	min-height: 130px;
+}
+.dr-pop-info p{
+	color: #fff;
+}
+.close-modal-btn{
+	
+	text-transform: uppercase;
+	margin: auto;
+	margin-top: 40px;
+	width: 100px;
+	height: 40px;
+	background-color: #00ab9b;
+	box-shadow: 0px 0px 1px 1px #000;
+	font-size: 24px;
+	color: #fff;
+}
+.close-mod-st{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+.close-modal:after , .close-modal:before{
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: #000;
+	position: absolute;
+	top: 15px;
+}
+.close-modal:after{
+	transform: rotate(130deg);
+}
+.close-modal:before{
+	transform: rotate(50deg);
+}
 input.error {
     border: 1px solid #ff0000 !important;
 }
@@ -861,31 +954,13 @@ input.error {
     top: 258px;
 }
 
-.form-pop {
-    width: 320px;
-    height: 90px;
-    background-color: #fff;
-    top: 73%;
-    position: relative;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px 1px #000;
-}
+
 
 .form-pop h2 {
     text-align: center;
     padding-top: 15px;
 }
 
-.form-pop div {
-    height: 20px;
-    background-color: #00ab9b;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
 
 .consultation-left {
     width: 405px;
@@ -943,13 +1018,15 @@ input.error {
 }
 
 .sl-dots {
-    display: flex;
-    justify-content: space-between;
     width: 92px;
     margin: auto;
     margin-top: 24px;
+    overflow: hidden;
 }
-
+.sl-dots li{
+	float:left;
+	margin: 5px;
+}
 .sl-dots button {
     padding: 0;
     font-size: 0;
@@ -1097,23 +1174,23 @@ footer a {
     height: 40px;
 }
 
-.foo-social a:first-child {
+.face-icon {
     background-position-x: 0px;
 }
 
-.foo-social a:nth-child(2) {
+.inst-icon {
     background-position-x: -48px;
 }
 
-.foo-social a:nth-child(3) {
+.twit-icon {
     background-position-x: -104px;
 }
 
-.foo-social a:nth-child(4) {
+.goo-icon{
     background-position-x: -160px;
 }
 
-.foo-social a:last-child {
+.other-icon {
     background-position-x: -212px;
 }
 
@@ -1217,14 +1294,14 @@ footer a {
         position: relative;
     }
 
-    .arr-cl {
+    .menu > li {
         height: auto !important;
     }
 
     .arr-cl:after {
         content: '';
         display: block;
-        width: 8px;
+        width: 12px;
         height: 11px;
         background-image: url(images/mob-menu-arrow.png);
         position: absolute;
@@ -1235,12 +1312,25 @@ footer a {
         background-repeat: no-repeat;
         background-position: -9px;
     }
-
+	.color-sub:after{
+		content: '';
+        display: block;
+        width: 12px;
+        height: 11px;
+        background-image: url(images/mob-menu-arrow.png);
+        position: absolute;
+        right: -140px;
+        left: 0;
+        margin: auto;
+        top: 16px;
+        background-repeat: no-repeat;
+        background-position: 3px;
+	}
     .color-sub {
         color: #00d8c4 !important;
     }
 
-    .list-del>li:after {
+    /*.list-del>li:after {
         content: '';
         display: block;
         width: 8px;
@@ -1253,8 +1343,7 @@ footer a {
         top: 15px;
         background-repeat: no-repeat;
         background-position: -9px;
-    }
-
+    }*/
     .btn-lvl-2,
     .drop-menu-lvl-2 li {
         display: block !important;
@@ -1308,7 +1397,10 @@ footer a {
         background-color: #fff;
         color: #000;
     }
-
+	.drop-menu li span:first-child:after{
+		right: -270px;
+		top: 15px;
+	} 
     .drop-menu-lvl-2 {
         position: static;
         background-color: #fff;
@@ -1339,6 +1431,7 @@ footer a {
 
     .list-del li {
         display: none;
+        height: auto;
     }
 
     .list-del li:first-child {
@@ -1413,15 +1506,23 @@ footer a {
     .procedures-right-title-block h3 {
         text-align: center;
     }
-
+	
+	.dr-pop{
+		top: 25vh;
+		margin: 0 20px;
+	}
     .procedures-container {
         padding-top: 25px;
     }
 
     .dr-photo-box img {
         padding-top: 20px;
+        margin: auto;
     }
-
+	.procedures-left-title-block h2:after{
+		left: 0;
+		width: 10%;
+	}
     .dr-photo-box,
     .dr-info,
     .procedures-gallery,
@@ -1442,6 +1543,7 @@ footer a {
 
     .learn {
         padding-left: 60%;
+        text-align: left;
     }
 
     .procedures-right {
