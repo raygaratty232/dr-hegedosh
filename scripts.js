@@ -21,31 +21,99 @@ $(document).ready(function(){
 		dots : true,
 		dotsClass : 'sl-dots'  
 	})
-	$('.services-btn').on('mouseenter' , function(){
-		$('.services-btn > a').addClass('color')
-		$('.drop-menu').addClass('show')
+
+	$('#date').datepicker({
+		language : 'en'
 	})
-	$('.services-btn').mouseleave(function(){
-		$('.services-btn a').removeClass('color')
-		$('.drop-menu').removeClass('show')
-	})
-	$('.btn-lvl-2').mouseenter(function(){
-		$('.drop-menu-lvl-2').addClass('show')
-	})
-	$('.btn-lvl-2').mouseleave(function(){
-		$('.drop-menu-lvl-2').removeClass('show')
-	})
+
+	$('#date').data('datepicker')
+
 	$('.mobile-btn').click(function(){
 		$('.menu').slideToggle()
 	})
 
+
+	$('.arr-cl').click(function(){
+		$(this).toggleClass('color-sub')
+		if($(".menu .arr-cl").hasClass('color-sub')){
+			$('.color-sub > .drop-menu').slideDown()
+			$('.color-sub > .drop-menu-lvl-2').slideDown()
+		}
+		else{
+			$('.arr-cl > .drop-menu').slideUp()
+			$('.arr-cl > .drop-menu-lvl-2').slideUp()
+		}
+	})
+
+
+ 	$('.selectbox-out').click(function(){
+ 		$('.selectbox-menu').toggleClass('show-local')
+ 	})
+
+
+
+
+    $('#validate').validate({
+      rules: {
+	        name : {
+	        	required: true,
+	        	minlength : 3
+	        	},
+	        email : {
+	        	required: true
+	        },
+	        
+	        phone : {
+	    		required: true
+	
+	    	},
+	    	date : {
+	    		required: true
+	    	}
+        },
+        messages: {
+	    		name: "Please specify your name",
+	    		phone : {
+	    			required : "Please enter your phone number"
+	    		},
+	    		email: {
+	      		required: "We need your email address to contact you"
+    		}
+  		},
+
+  		
+	});
+
+	$('#validate').submit(function() { 
+		if ($('[name="name"]') !== '' || $('[name="phone"]') !== '' || $('[name="email"]') !== '' || $('[name="text"]') !=='') {
+			valid = false;
+			return valid;
+		}
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$('.form-pop-container').fadeIn();
+			$(this).find('input').val('');
+		});
+		$(function($){
+		$('[name="phone"]').mask("+7(999) 999-9999");
+		});
+	})
+
+
 	function windowSize(){
 	    if ($(window).width() <= 480){
-	        $('.services-btn').on('click' , function(){
-				$('.services-btn > a').toggleClass('color')
-				$('.drop-menu').toggleClass('show')
-			})
+	        $('.menu > .hover-desk').removeClass('hover-desk');
+	        $('.drop-menu > .btn-lvl-2').removeClass('btn-lvl-2');
+	        $('.drop-menu > .hover-desk').removeClass('hover-desk');
+	       
 	    } 
 	}
 	 $(window).on('load resize',windowSize);
+
+
 })
+
+
