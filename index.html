@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="slickSlider/slick.css">
 	<link rel="stylesheet" href="slickSlider/slick-theme.css">
+	<link rel="stylesheet" href="validation/datepicker.min.css">
 </head>
 <body>
 	<div class="overflow-wrapper">
@@ -14,9 +15,31 @@
 		<header>
 			<div class="header-top">
 				<div class="logo">
-					<img src="images/logo.png" alt="">
+					<a href="#">
+						<img src="images/logo.png" alt="">
+					</a>
 				</div>
-				<a href="#" class="locaction-btn">Elite Med SPA: Boca Raton</a>
+				<div class="location-box" id="selectBox">	
+						<div class="selectbox">
+							<div class="selectbox-out">
+									<a href="#" class="locaction-btn" >Elite Med SPA:West Palm Beach</a>
+							</div>
+							<ul class="selectbox-menu">
+								<li>
+									<a href="#" class="locaction-btn">Elite Med SPA:Ft Lauderdale</a>
+						         </li>
+								<li>
+									<a href="#" class="locaction-btn">Elite Med SPA: Delray Beach</a>
+						         </li>
+								<li>
+									<a href="#" class="locaction-btn">Elite Med SPA: Hollywood</a>
+						         </li>
+								<li>
+									<a href="#" class="locaction-btn">Elite Med SPA: Hallandale</a>
+						         </li>
+							</ul>
+						</div>	
+				</div>
 				<a href="tel:(954) 456-4777" class="head-number">(954) 456-4777</a>
 				<a href="#" class="request-btn head-btn">request aN Appointment</a>
 			</div>
@@ -31,19 +54,33 @@
 						<li>
 							<a href="#">Home</a>
 						</li>
-						<li class="services-btn">
-							<a href="#">Services</a>
-								<ul class="drop-menu">
-									<li class="btn-lvl-2">
-										<a href="#" >injectables - Botox & Others</a>
-											<ul class="drop-menu-lvl-2">
+						<li class="hover-desk arr-cl">
+							Services
+								<ul class="drop-menu list-del">
+									<li class="btn-lvl-2 hover-desk arr-cl">
+										injectables - Botox & Others
+											<ul class="drop-menu-lvl-2 lvl-l">
 												<li><a href="#">Botox</a></li>
 												<li><a href="#">Dysport</a></li>
 												<li><a href="#">New Tox</a></li>
 											</ul>
 									</li>
-									<li>
-										<a href="#">Cosmetic Dermal Fillers</a>
+									<li class="btn-lvl-2 hover-desk arr-cl">
+										Cosmetic Dermal Fillers
+										<ul class="drop-menu-lvl-2">
+												<li><a href="#">Juvederm</a></li>
+												<li><a href="#">Juvederm Voluma</a></li>
+												<li><a href="#">Juvederm XC</a></li>
+												<li><a href="#">Juvederm Vollure XC</a></li>
+												<li><a href="#">Juvederm Ultra XC</a></li>
+												<li><a href="#">Juvederm Volbella XC</a></li>
+												<li><a href="#">Restyline L</a></li>
+												<li><a href="#">Restyline slik</a></li>
+												<li><a href="#">Restyline Lyft</a></li>
+												<li><a href="#">Restyline define</a></li>
+												<li><a href="#">Restyline Refine</a></li>
+												<li><a href="#">Versa R</a></li>
+										</ul>
 									</li>
 									<li>
 										<a href="#">Kybella - Permanent Fat Reduction</a>
@@ -68,14 +105,23 @@
 						<li>
 							<a href="#">About </a>
 						</li>
-						<li>
-							<a href="#">Resources </a>
+						<li class="hover-desk arr-cl">
+							Resources
+							<ul class="drop-menu hover-desk">
+									<li><a href="#">Testimonials</a></li>
+									<li><a href="#">Glossary</a></li>
+									<li><a href="#">FAQ</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="#">For Men</a>
 						</li>
-						<li>
-							<a href="#">Gallery </a>
+						<li class="hover-desk arr-cl">
+							Gallery
+							<ul class="drop-menu hover-desk">
+									<li><a href="#">Photo</a></li>
+									<li><a href="#">Video</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="#">Blog</a>
@@ -95,7 +141,7 @@
 			<div class="main-slider-block">
 				<div class="main-slider-box">
 					<div class="book-now-box">
-						<h2>Anti-wrinkle injections</h2>
+						<h2>Anti-wrinkle injections:</h2>
 						<h3>Botox, Dysport, New Tox</h3>
 						<button>Book now</button>
 					</div>
@@ -104,8 +150,19 @@
 			<div class="main-slider-block">
 				<div class="main-slider-box">
 					<div class="book-now-box">
-						<h2>Anti-wrinkle injections</h2>
-						<h3>Botox, Dysport, New Tox</h3>
+						<h2>Dermal Fillers and Voluma Fillers:</h2>
+						<h3>Add volume to your neck & cheeck
+							Juvederm collectoin of fillers</h3>
+						<button>Book now</button>
+					</div>
+				</div>
+			</div>
+			<div class="main-slider-block">
+				<div class="main-slider-box">
+					<div class="book-now-box">
+						<h2>Liquid lifft & PRP BIO Rejuvenation:</h2>
+						<h3>Liffing and re-contouring of the aging face
+							Resurface skin rejuvenation</h3>
 						<button>Book now</button>
 					</div>
 				</div>
@@ -255,22 +312,25 @@
 				</div>
 			</div>
 			<div class="consultation-container">
+				<div class="form-pop-container">
+					<div class="form-pop">
+						<h2>successfully sent</h2>
+						<div></div>
+					</div>
+				</div>
+				
 				<div class="consultation-left">
 					<h2>Request Free Consultation</h2>
-					<form action="#">
-						<label for="">
-							<input type="name" placeholder="Name*">
-						</label>
-						<label for="">
-							<input type="mail" placeholder="Email*">
-						</label>
-						<label for="">
-							<input type="phone" placeholder="Phone*">
-						</label>
-						<label for="">
-							<input type="text" placeholder="Date of birth*">
-						</label>
-						<button>submite</button>
+					<form action="" class="consultation-form" id="validate" method="POST">
+						<label for="name"></label>
+							<input required id="name" name="name" minlength="3" type="name" placeholder="Name*">
+						<label for="email"></label>
+							<input required id="email" type="email" name="email" placeholder="Email*">
+						<label for="phone"></label>
+							<input required id="phone" type="phone" name="phone" minlength="12" placeholder="Phone*">
+						<label for="date"></label>
+							<input required id="date" class="datepicker-here" value="Date of birth*" type="text" placeholder="Date of birth*" data-position="right top">
+						<button type="submit" name="send" class="send">submite</button>
 					</form>
 				</div>
 				<div class="consultation-right">
@@ -308,15 +368,23 @@
 			</div>
 			<div class="blog-container">
 				<div class="blog-box">
-					<img src="images/blog-1.png" alt="">
+					<a href="#">
+						<img src="images/blog-1.png" alt="">
+					</a>
+					
 					<p>How can you benefit from Sculptra?</p>
 				</div>
 				<div class="blog-box">
-					<img src="images/blog-2.png" alt="">
+					<a href="#">
+						<img src="images/blog-2.png" alt="">	
+					</a>
 					<p>IPL – comfortable way of rejuvenation</p>
 				</div>
 				<div class="blog-box">
-					<img src="images/blog-3.png" alt="">
+					<a href="#">
+						<img src="images/blog-3.png" alt="">	
+					</a>
+					
 					<p>BOTOX reliable treatment!</p>
 				</div>
 			</div>
@@ -361,7 +429,12 @@
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="slickSlider/slick.min.js"></script>
+<script src="validation/jquery.validate.js"></script>
+<script src="validation/jquery.maskedinput.js"></script>
+<script src="validation/datepicker.min.js"></script>
+<script src="validation/datepicker.en.js"></script>
 <script src="scripts.js"></script>	
 </body>
 </html>
