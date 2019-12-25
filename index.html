@@ -7,26 +7,37 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="slickSlider/slick.css">
 	<link rel="stylesheet" href="slickSlider/slick-theme.css">
+	<link rel="stylesheet" href="Magnific-Popup/magnific-popup.css">
 	<link rel="stylesheet" href="validation/datepicker.min.css">
 </head>
 <body>
+	<!--
+		- убрал появление подменю по клику(только ховер)
+		- расставил все отступы согласно последним правкам
+		- подключил magnificPopup
+		- попап форма по нажатию на request aN Appointment в шапке
+		- прописал alt для фото из галереи
+		- заменил заголовки elite medical spa на img
+		- внес изменения в віпадающее меню (удалил класс lvl-l)
+
+	-->
 	<div class="overflow-wrapper">
 		<!--header start-->
 		<header>
 			<div class="header-top">
 				<div class="logo">
 					<a href="#">
-						<img src="images/logo.png" alt="">
+						<img src="images/logo.png" alt="Dr. Hegedosh - Elite Medical SPA">
 					</a>
 				</div>
 				<div class="location-box" id="selectBox">	
 						<div class="selectbox">
 							<div class="selectbox-out">
-									<a href="#" class="locaction-btn" >Elite Med SPA:West Palm Beach</a>
+									<a href="#" class="locaction-btn" >Elite Med SPA: West Palm Beach</a>
 							</div>
 							<ul class="selectbox-menu">
 								<li>
-									<a href="#" class="locaction-btn">Elite Med SPA:Ft Lauderdale</a>
+									<a href="#" class="locaction-btn">Elite Med SPA: Ft Lauderdale</a>
 						         </li>
 								<li>
 									<a href="#" class="locaction-btn">Elite Med SPA: Delray Beach</a>
@@ -41,7 +52,7 @@
 						</div>	
 				</div>
 				<a href="tel:(954) 456-4777" class="head-number">(954) 456-4777</a>
-				<a href="#" class="request-btn head-btn">request aN Appointment</a>
+				<a href="#modal-dialog" class="request-btn head-btn">request aN Appointment</a>
 			</div>
 			<div class="nav-container">
 				<nav>
@@ -59,7 +70,7 @@
 								<ul class="drop-menu list-del">
 									<li class="btn-lvl-2 hover-desk">
 										<span class="arr-cl">injectables - Botox & Others</span>
-											<ul class="drop-menu-lvl-2 lvl-l">
+											<ul class="drop-menu-lvl-2">
 												<li><a href="#">Botox</a></li>
 												<li><a href="#">Dysport</a></li>
 												<li><a href="#">New Tox</a></li>
@@ -140,37 +151,33 @@
 		<div class="main-slider">
 			<div class="main-slider-block">
 				<div class="main-slider-box">
+					
 					<div class="book-now-box">
-						<h2>Anti-wrinkle injections:</h2>
-						<h3>Botox, Dysport, New Tox</h3>
-						<div class="slider-btn">
-							<a href="#">Book now</a>
-						</div>
-						
+						<div>Anti-wrinkle injections</div>
+						<span>Botox, Dysport, New Tox</span>						
+							<a href="#" class="slider-btn">Book now</a>
 					</div>
 				</div>
 			</div>
 			<div class="main-slider-block">
 				<div class="main-slider-box">
+					
 					<div class="book-now-box">
-						<h2>Dermal Fillers and Voluma Fillers:</h2>
-						<h3>Add volume to your neck & cheeck
-							Juvederm collectoin of fillers</h3>
-						<div class="slider-btn">
-							<a href="#">Book now</a>
-						</div>
+						<div>Dermal Fillers and Voluma Fillers</div>
+						<span>Add volume to your neck & cheeck
+							Juvederm collectoin of fillers</span>
+							<a href="#" class="slider-btn">Book now</a>
 					</div>
 				</div>
 			</div>
 			<div class="main-slider-block">
 				<div class="main-slider-box">
+					
 					<div class="book-now-box">
-						<h2>Liquid lifft & PRP BIO Rejuvenation:</h2>
-						<h3>Liffing and re-contouring of the aging face
-							Resurface skin rejuvenation</h3>
-						<div class="slider-btn">
-							<a href="#">Book now</a>
-						</div>
+						<div>Liquid lifft & PRP BIO Rejuvenation</div>
+						<span>Liffing and re-contouring of the aging face
+							Resurface skin rejuvenation</span>
+						<a href="#" class="slider-btn">Book now</a>
 					</div>
 				</div>
 			</div>
@@ -182,16 +189,18 @@
 				<div class="procedures-left">
 					<div class="procedures-left-title-block">
 						<h2>Dr. Hegedosh</h2>
-						<h3>Board-Certified Physician</h3>
+						<div>Board-Certified Physician</div>
 					</div>	
 					<div class="dr-photo-box">
-						<img src="images/photo/Dr.png" alt="">
+						<img src="images/photo/Dr.png" alt="Dr. Hegedosh - Board-Cetified Physician(Baco Raton)">
 						<p>Minimal invasion treatment
 							Natural look & Refreshed
 							in just about 15 minutes</p>
 					</div>	
 					<div class="google-box-info">
-						<img src="images/Google-reviews-logo.png" alt="">
+						<div class="goo-img-box">
+							<img src="images/Google-reviews-logo.png" alt="Google review">
+						</div>
 						<div class="green-line"></div>
 						<ul>
 							<li>Sagging Skin,</li>
@@ -201,119 +210,99 @@
 						</ul>
 					</div>
 						<p class="dr-info">Dr. Natalia Hegedosh, is an amazing professional, who has dedicated her life to innovations that help people to look and feel younger.</p>
-						<a href="#" class="learn">Learn more </a>
-						<div class="dr-pop-container">
-							<div class="dr-pop">
-								<div class="close-modal close-mod-st"></div>
-								<div class="dr-pop-title">
-									<h2>Dr. Natalia Hegedosh</h2>
-								</div>
-								<div class="dr-pop-info">
-									<p>Dr. Natalia Hegedosh, is an amazing professional, who has dedicated her life to innovations that help people to look and feel younger.
-									Dr. Natalia Hegedosh, is an amazing professional, who has dedicated her life to innovations that help people to look and feel younger.</p>
-								</div>
-								<button class="close-modal-btn">ok</button>
-							</div>
-							
-						</div>
+						<a href="#dr-pop" class="learn">Learn more </a>
+						
 						
 				</div>
 				<div class="procedures-right">
 					<div class="procedures-right-title-block">
 						<h2>Cosmetic Procedures</h2>
-						<h3>Look young as you feel young</h3>
+						<div>Look young as you feel young</div>
 					</div>	
 					<div class="procedures-gallery">
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/girl-1.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>Anti-Wrinkle Injections</h2>
-								<h3>Botox, Dyport, New Tox</h3>
+						<a href="#" class="procedures-gallery-box">
+							<div>	
+								<img src="images/photo/girl-1.png" alt="Anti-Wrinkle Injections Botox, Dyport, New Tox">	
+								<div class="gallery-box-info">
+									<h2>Anti-Wrinkle Injections</h2>
+									<span>Botox, Dyport, New Tox</span>
+								</div>
 							</div>
-						</div>
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/girl-2.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>Dermal Fillers </h2>
-								<h3>Facial lifting & lip enhancement </h3>
+						</a>
+						
+						<a href="#" class="procedures-gallery-box">
+							<div>
+								<img src="images/photo/girl-2.png" alt="Dermal Fillers Facial lifting & lip enhancement">
+								<div class="gallery-box-info">
+									<h2>Dermal Fillers </h2>
+									<span>Facial lifting & lip enhancement </span>
+								</div>
 							</div>
-						</div>
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/girl-3.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>Kybella </h2>
-								<h3>Double chin treatment </h3>
+						</a>
+						<a href="#" class="procedures-gallery-box">
+							<div>
+								<img src="images/photo/girl-3.png" alt="Kybella Double chin treatment">
+								<div class="gallery-box-info">
+									<h2>Kybella </h2>
+									<span>Double chin treatment </span>
+								</div>
 							</div>
-						</div>
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/girl-4.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>Laser Skin Resurfacing  </h2>
-								<h3>Deep collagen stimulator</h3>
+						</a>
+						<a href="#" class="procedures-gallery-box">
+							<div>
+								<img src="images/photo/girl-4.png" alt="Laser Skin Resurfacing Deep collagen stimulator ">
+								<div class="gallery-box-info">
+									<h2>Laser Skin Resurfacing  </h2>
+									<span>Deep collagen stimulator</span>
+								</div>
 							</div>
-						</div>
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/girl-5.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>IPL Laser</h2>
-								<h3>Rosacea & spot treatment</h3>
+						</a>
+						<a href="#" class="procedures-gallery-box">
+							<div>
+								<img src="images/photo/girl-5.png" alt="IPL Laser Rosacea & spot treatment">
+								<div class="gallery-box-info">
+									<h2>IPL Laser</h2>
+									<span>Rosacea & spot treatment</span>
+								</div>
 							</div>
-						</div>
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/girl-6.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>PRP Plasma lifting  </h2>
-								<h3>Autologous stem cell treatment</h3>
+						</a>
+						<a href="#" class="procedures-gallery-box">
+							<div>
+								<img src="images/photo/girl-6.png" alt="PRP Plasma lifting Autologous stem cell treatment ">
+								<div class="gallery-box-info">
+									<h2>PRP Plasma lifting  </h2>
+									<span>Autologous stem cell treatment</span>
+								</div>
 							</div>
-						</div>
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/boy-1.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>PRP Hair restoration</h2>
-								<h3>Stabilizer of hair follicles</h3>
+						</a>
+						<a href="#" class="procedures-gallery-box">
+							<div>
+								<img src="images/photo/boy-1.png" alt="PRP Hair restoration Stabilizer of hair follicles">			
+								<div class="gallery-box-info">
+									<h2>PRP Hair restoration</h2>
+									<span>Stabilizer of hair follicles</span>
+								</div>
 							</div>
-						</div>
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/girl-7.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>Papilloma removal </h2>
-								<h3>Skin tag removal</h3>
+						</a>
+						<a href="#" class="procedures-gallery-box">
+							<div>
+								<img src="images/photo/girl-7.png" alt="Papilloma removal Skin tag removal">
+								<div class="gallery-box-info">
+									<h2>Papilloma removal </h2>
+									<span>Skin tag removal</span>
+								</div>
+							</div>	
+						</a>
+						<a href="#" class="procedures-gallery-box">
+							<div >
+									<img src="images/photo/girl-8.png" alt="Smoothing wrinkles  Threads skin repositioning">
+									<div class="gallery-box-info">
+										<h2>Smoothing wrinkles </h2>
+										<span>Threads skin repositioning</span>
+									</div>
 							</div>
-						</div>
-						<div class="procedures-gallery-box">
-							<a href="#">
-								<img src="images/photo/girl-8.png" alt="">
-							</a>
-							
-							<div class="gallery-box-info">
-								<h2>Smoothing wrinkles </h2>
-								<h3>Threads skin repositioning</h3>
-							</div>
-						</div>
+						</a>
+						
 					</div>
 				</div>
 			</div>
@@ -331,8 +320,8 @@
 			</div>
 			<div class="subscribe-container">
 				<div class="sub-info">
-					<h2>Subscribe</h2>
-					<h3>to receive "7 Antiaging  Secrets" and special offers </h3>
+					<div>Subscribe</div>
+					<span>to receive "7 Antiaging  Secrets" and special offers </span>
 				</div>
 				<form action="#">
 					<label for="email">
@@ -344,15 +333,16 @@
 			</div>
 			<div class="elite-info-container">
 				<div class="elite-info-left">
-					<h2>elite</h2>
-					<h3>medical spa</h3>
+					<div class="elite-logo">
+						<img src="images/elit-med-logo.png" alt="elite medical spa">
+					</div>
 					<p>370 Camino Garden BLVD, 
 						Office 111, Boca Raton 
 						FL 33432, USA </p>
 				</div>
 				<div class="elite-info-right">
-					<h2>Dr. Hegedosh is commited to delivering the highest quality services and the latest in 
-					rejuvenation techniques</h2>
+					<h3>Dr. Hegedosh is commited to delivering the highest quality services and the latest in 
+					rejuvenation techniques</h3>
 					<ul>
 						<li>Leader in non-invasive Aesthetic procedures</li>
 						<li>Over 20 years of experience</li>
@@ -361,13 +351,7 @@
 				</div>
 			</div>
 			<div class="consultation-container">
-				<div class="form-pop-container">
-					
-					<div class="form-pop">
-						<h2>successfully sent</h2>
-						<button class="close-modal-btn">ok</button>
-					</div>
-				</div>
+				
 				
 				<div class="consultation-left">
 					<h2>Request Free Consultation</h2>
@@ -417,26 +401,28 @@
 				</div>
 			</div>
 			<div class="blog-container">
-				<div class="blog-box">
-					<a href="#">
-						<img src="images/blog-1.png" alt="">
-					</a>
-					
-					<p>How can you benefit from Sculptra?</p>
-				</div>
-				<div class="blog-box">
-					<a href="#">
+				<a href="#" class="blog-box">
+					<div>
+						<img src="images/blog-1.png" alt="">	
+						<h2>How can you benefit from Sculptra?</h2>
+						<p class="announcement">Анонс</p>
+					</div>
+				</a>
+				<a href="#" class="blog-box">
+					<div>
 						<img src="images/blog-2.png" alt="">	
-					</a>
-					<p>IPL – comfortable way of rejuvenation</p>
+						<h2>IPL – comfortable way of rejuvenation</h2>
+						<p class="announcement">Анонс</p>
+					</div>
+				</a>
+				<a href="#" class="blog-box">
+					<div>
+						<img src="images/blog-3.png" alt="">					
+						<h2>BOTOX reliable treatment!</h2>
+						<p class="announcement">Анонс</p>
 				</div>
-				<div class="blog-box">
-					<a href="#">
-						<img src="images/blog-3.png" alt="">	
-					</a>
-					
-					<p>BOTOX reliable treatment!</p>
-				</div>
+				</a>
+				
 			</div>
 		</main>
 		<!--main end-->
@@ -444,9 +430,9 @@
 		<!--footer- start-->
 
 		<footer>
-			<h2>Elite Medical SPA </h2>
-			<h3>Cosmetic Services Performed by MD</h3>
-			<h4>370 Camino Garden BLVD,  Office 111, Boca Raton  FL 33432, USA</h4>
+			<h3>Elite Medical SPA </h3>
+			<p>Cosmetic Services Performed by MD</p>
+			<address>370 Camino Garden BLVD,  Office 111, Boca Raton  FL 33432, USA</address>
 			<a href="tel:(954) 456-4777">(954) 456-4777</a>
 			<div class="foo-cont">
 				<p>Copyright ©2020 drhegedosh.com </p>
@@ -466,11 +452,247 @@
 		<!--footer- end-->
 	</div>
 
+	<div class="pop-section">
 
 
+		<div class="dr-pop" id="dr-pop">
+			<div class="dr-pop-title">
+				<h2>Dr. Natalia Hegedosh</h2>
+			</div>
+			<div class="dr-pop-info">
+				<p>Dr. Natalia Hegedosh, is an amazing professional, who has dedicated her life to 		innovations that help people to look and feel younger.
+					Dr. Natalia Hegedosh, is an amazing professional, who has dedicated her life to innovations that help people to look and feel younger.</p>
+			</div>
+			
+		</div>					
 
 
+		<div class="form-pop mfp-content" id="form-sent">
+			<h2>successfully sent</h2>
+			<button class="close-modal-btn">ok</button>
+		</div>
 
+
+		
+
+		<div class="modal-dialog" id="modal-dialog">
+			<div class="modal-headr">
+				<h3>Request an Appointment</h3>
+			</div>
+			<div class="modal-content">
+				<div class="modal-header"></div>
+				<form action="#" id="patient-form">
+					<div class="modal-body">
+						<div class="modal-body-l">
+							<div class="label" id="newpatient-label">New Patient?</div>
+							<ul>
+			                  	<li><input id="new-patient-yes" name="newpatient" type="radio" value="yes">
+			                    <label for="new-patient-yes">Yes</label></li>
+			                  	<li><input id="new-patient-no" name="newpatient" type="radio" value="no">
+			                    <label for="new-patient-no">No</label></li>
+			                </ul>
+							<div id="reason-section-1">
+				                <div class="label reason-label">Reason</div>
+				                <input class="txt-input" placeholder="e.g. annual checkup, follow-up, ..." maxlength="150" name="reason" type="text" value="">
+				                <select class="txt-input" name="reason" style="display: none;" disabled=""></select>
+			            	</div>
+			            	<div id="name-section-1">
+				                <div class="label" id="name-label">Name</div>
+				                <input class="txt-input inline-input" placeholder="First" name="firstname" type="text" value="">
+				                <input class="txt-input inline-input" placeholder="Last" name="lastname" type="text" value="">
+			            	</div>
+			            	<div id="email-section-1">
+		                		<div class="label" id="email-label">Email address</div>
+		                		<input class="txt-input" name="email" type="email" value="">
+		              		</div>
+		              		<div id="phone-section-1">
+		                		<div class="label" id="phone-label">Mobile Phone Number</div>
+		                		<input class="txt-input" id="appointment-phone" name="phone" type="tel" value="">
+		              		</div>
+		              		<div id="date_of_birth-section-1">
+		                		<div class="label" id="date_of_birth-label">Date of Birth</div>
+		                		<input class="txt-input" placeholder="mm/dd/yyyy" maxlength="10" name="date_of_birth" type="text" value="">
+		              		</div>
+		             		<div id="insurance_provider_id-section-1">
+		             			<div id=selectBox-form>
+		             			<img src="images/R-Arrow.png" alt="arrow">
+							      <p class=valueTag name=select>Procedures of interest</p>
+							        <ul id=selectMenuBox>
+							         <li class=option>select item 1</li>
+							         <li class=option>select item 2</li>
+							         <li class=option>select item 3</li>
+							         <li class=option>select item 4</li>
+							         <li class=option>select item 5</li>
+							         
+							       </ul>
+							    </div>
+	                			
+			            	</div>
+			        	</div>
+			        	<div class="modal-body-r">
+			            	<div class="calendar-block">
+			            		<div class="grid-block">
+			            			<ul>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>MON<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>TUE<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>WED<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>THU<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23">
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								
+			            							</div>
+			            						</li>
+			            						<li class="scroller more">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>FRI<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>SAT<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>SUN<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            			</ul>
+			            		</div>
+			            		<div class="grid-block">
+			            			<ul>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>MON<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>TUE<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>WED<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>THU<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23">
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								
+			            							</div>
+			            						</li>
+			            						<li class="scroller more">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>FRI<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>SAT<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            				<li class="day-grid">
+			            					<ol>
+			            						<li>SUN<span>12/23/2019</span></li>
+			            						<li class="slot-holder">
+			            							<div class="slots" id="2019-12-23"></div>
+			            						</li>
+			            						<li class="scroller">More...</li>
+			            					</ol>
+			            				</li>
+			            			</ul>
+			            		</div>
+			            	</div>
+			        	</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+	            <button class="btn-cancel" type="button" data-dismiss="modal">Cancel</button>
+	            <button class="btn-book-now primary-bg primary-border" type="button">Request</button>
+          	</div>
+		</div>
+	
+
+	</div>
+	
+
+	
 
 
 
@@ -484,6 +706,7 @@
 <script src="validation/jquery.validate.js"></script>
 <script src="validation/jquery.maskedinput.js"></script>
 <script src="validation/datepicker.min.js"></script>
+<script src="Magnific-Popup/jquery.magnific-popup.min.js"></script>
 <script src="validation/datepicker.en.js"></script>
 <script src="scripts.js"></script>	
 </body>
