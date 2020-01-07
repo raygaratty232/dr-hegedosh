@@ -12,13 +12,8 @@
 </head>
 <body>
 	<!--
-		- убрал появление подменю по клику(только ховер)
-		- расставил все отступы согласно последним правкам
-		- подключил magnificPopup
-		- попап форма по нажатию на request aN Appointment в шапке
-		- прописал alt для фото из галереи
-		- заменил заголовки elite medical spa на img
-		- внес изменения в віпадающее меню (удалил класс lvl-l)
+		фикс слайдера в попапе
+		скрол блоков со временем
 
 	-->
 	<div class="overflow-wrapper">
@@ -191,6 +186,8 @@
 						<h2>Dr. Hegedosh</h2>
 						<div>Board-Certified Physician</div>
 					</div>	
+					<div class="prod-tab">
+		
 					<div class="dr-photo-box">
 						<img src="images/photo/Dr.png" alt="Dr. Hegedosh - Board-Cetified Physician(Baco Raton)">
 						<p>Minimal invasion treatment
@@ -211,7 +208,7 @@
 					</div>
 						<p class="dr-info">Dr. Natalia Hegedosh, is an amazing professional, who has dedicated her life to innovations that help people to look and feel younger.</p>
 						<a href="#dr-pop" class="learn">Learn more </a>
-						
+					</div>
 						
 				</div>
 				<div class="procedures-right">
@@ -344,9 +341,9 @@
 					<h3>Dr. Hegedosh is commited to delivering the highest quality services and the latest in 
 					rejuvenation techniques</h3>
 					<ul>
-						<li>Leader in non-invasive Aesthetic procedures</li>
-						<li>Over 20 years of experience</li>
-						<li>100% Satisfaction</li>
+						<li><span><img src="images/tick-icon.png" alt=""></span> Leader in non-invasive Aesthetic procedures</li>
+						<li><span><img src="images/tick-icon.png" alt=""></span> Over 20 years of experience</li>
+						<li><span><img src="images/tick-icon.png" alt=""></span> 100% Satisfaction</li>
 					</ul>
 				</div>
 			</div>
@@ -371,35 +368,33 @@
 					<div class="BA-slider">
 						<div class="BA-slider-block">
 							<div class="BA-slider-box">
-								<h2>before</h2>
-								<h2>after</h2>
+								
 								<img src="images/before-after.png" alt="">
 							</div>
 						</div>
 						<div class="BA-slider-block">
 							<div class="BA-slider-box">
-								<h2>before</h2>
-								<h2>after</h2>
+								
 								<img src="images/before-after.png" alt="">
 							</div>
 						</div>
 						<div class="BA-slider-block">
 							<div class="BA-slider-box">
-								<h2>before</h2>
-								<h2>after</h2>
+								
 								<img src="images/before-after.png" alt="">
 							</div>
 						</div>
 						<div class="BA-slider-block">
 							<div class="BA-slider-box">
-								<h2>before</h2>
-								<h2>after</h2>
+								
 								<img src="images/before-after.png" alt="">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+
 			<div class="blog-container">
 				<a href="#" class="blog-box">
 					<div>
@@ -422,7 +417,9 @@
 						<p class="announcement">Анонс</p>
 				</div>
 				</a>
-				
+			</div>
+			<div class="insta-container">
+				 
 			</div>
 		</main>
 		<!--main end-->
@@ -555,17 +552,34 @@
 			            					<ol>
 			            						<li>WED<span>12/23/2019</span></li>
 			            						<li class="slot-holder">
-			            							<div class="slots" id="2019-12-23"></div>
+			            							<div class="slots not-empty" id="2019-12-23">
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">11:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">12:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">13:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">14:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">15:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">17:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>			            								
+			            							</div>
 			            						</li>
-			            						<li class="scroller">More...</li>
+			            						<li class="scroller more" >More...</li>
 			            					</ol>
 			            				</li>
 			            				<li class="day-grid">
 			            					<ol>
 			            						<li>THU<span>12/23/2019</span></li>
 			            						<li class="slot-holder">
-			            							<div class="slots" id="2019-12-23">
+			            							<div class="slots not-empty" id="2019-12-23">
 			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">11:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">12:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">13:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">14:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">15:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">17:45 am</a>
 			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
 			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
 			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
@@ -637,7 +651,11 @@
 			            					<ol>
 			            						<li>THU<span>12/23/2019</span></li>
 			            						<li class="slot-holder">
-			            							<div class="slots" id="2019-12-23">
+			            							<div class="slots not-empty" id="2019-12-23">
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
 			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
 			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
 			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
@@ -661,9 +679,19 @@
 			            					<ol>
 			            						<li>SAT<span>12/23/2019</span></li>
 			            						<li class="slot-holder">
-			            							<div class="slots" id="2019-12-23"></div>
+			            							<div class="slots not-empty" id="2019-12-23">
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								<a href="#" data-blockid="397198513" class="time-slot primary-bg">10:45 am</a>
+			            								
+			            							</div>
 			            						</li>
-			            						<li class="scroller">More...</li>
+			            						<li class="scroller more">More...</li>
 			            					</ol>
 			            				</li>
 			            				<li class="day-grid">
