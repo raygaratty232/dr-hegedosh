@@ -225,6 +225,7 @@ header {
 .elite-info-container,
 .consultation-container,
 .blog-container,
+.insta-container,
 .foo-cont {
     max-width: 1107px;
     margin: auto;
@@ -451,6 +452,7 @@ main {
 }
     
 .slider-btn{
+    outline: none;
     width: 280px;
     height: 70px;
     border: none;
@@ -675,9 +677,12 @@ main {
     padding-top: 111px;
     color: #666666;
 }
-
+.slick-initialized .slick-slide{
+    outline: none;
+}
 .google-prev,
 .google-next {
+    outline: none;
     position: absolute;
     border: none;
     background-color: transparent;
@@ -837,8 +842,14 @@ main {
     text-align: center;
     padding-top: 27px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.elite-info-right ul li span{
+    padding-right: 10px;
+}
+/*
 .elite-info-right ul li:before {
     content: '';
     display: block;
@@ -857,7 +868,7 @@ main {
 
 .elite-info-right ul li:nth-child(3):before {
     left: 150px;
-}
+}*/
 
 /*elite-info end*/
 
@@ -1023,7 +1034,7 @@ main {
 #selectBox-form {
     width: 274px;
     position: absolute;
-    height: 25px;
+    height: 37px;
     border-radius: 3px;
     border: solid 1px lightgrey;
     background-color: #fff;
@@ -1034,6 +1045,7 @@ main {
 }
 #selectBox-form p.valueTag {
     padding-left: 5px;
+    padding-top: 7px;
     cursor: pointer;
     transition: .2s;
     color: #555;
@@ -1044,12 +1056,9 @@ main {
     right: 20px;
     width: auto;
     transform: rotate(90deg);
-    top: 10px;
+    top: 15px;
 }
 
-/*
-        для пользователей Safari, Chrome и Opera приятный бонус — стилизованный скролл-бар. 
-*/
 ::-webkit-scrollbar {
     background: transparent;
     width: 0.5em;
@@ -1122,6 +1131,9 @@ top: 49px;
     box-sizing: border-box;
     margin-top: 15px;
     margin-left: 13px;
+}
+.slots{
+    transition: 0.1s;
 }
 .slots a{
     width: 87px;
@@ -1374,6 +1386,7 @@ input.error {
 	margin: 5px;
 }
 .sl-dots button {
+    outline: none;
     padding: 0;
     font-size: 0;
     width: 13px;
@@ -1433,6 +1446,16 @@ input.error {
 }
 
 /*blog end*/
+
+
+/*insta-start*/
+
+.insta-container{
+    width: 100%;
+}
+
+
+/*insta-end*/
 
 /*main end*/
 
@@ -1552,11 +1575,93 @@ footer a {
 
 /*footer end*/
 
+/*media 1090*/
+@media screen and (max-width: 1090px){
+    .procedures-container{
+        flex-direction: column;
+    }
+    .procedures-left{
+        width: 600px;
+        margin: auto;
+    }
+    .prod-tab{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+    }
+    .dr-info{
+        position: absolute;
+        bottom: 70px;
+        width: 250px;
+        right: 0;
+    }
+    .procedures-gallery:before{
+        display: none;
+    }
+    .learn{
+        position: absolute;
+        bottom: 0;
+    }
+    .procedures-right , .procedures-gallery{
+        width: 100%;
+    }
+    .procedures-right-title-block{
+        padding-left: 20px;
+    }
+    .procedures-gallery{
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    .procedures-gallery-box{
+        height: auto;
+    }
+    .procedures-right{
+        margin-top: 50px;
+    }
+    .subscribe-container{
+        padding: 0 20px;
+    }
+    .subscribe-container img{
+        display: none;
+    }
+    .elite-info-container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .elite-info-right{
+        margin-left: 30px;
+    }
 
-/*media 480*/
+}
+/*media 1090 end*/
 
-@media screen and (max-width: 480px) {
-    .mobile-btn {
+/*media 950*/
+@media screen and (max-width: 950px){
+    .elite-info-right{
+        margin-right: 0;
+    }
+    .BA-slider{
+        width: 80%;
+        margin: auto;
+        padding-top: 70px;
+    }
+    .BA-slider-box img{
+        width: 100%;
+    }
+    .consultation-container{
+        flex-direction: column;
+    }
+    .consultation-left{
+        width: 450px;
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width: 980px){
+   .mobile-btn {
         display: block;
         width: 24px;
         height: 20px;
@@ -1587,23 +1692,6 @@ footer a {
     .bot-line {
         bottom: 0;
     }
-
-    .locaction-btn,
-    .foo-cont p,
-    .BA-slider,
-    .head-number,
-    .google-box-info,
-    .procedures-gallery:before,
-    .google-slider,
-    .modal-body-r,
-    .subscribe-container img {
-        display: none !important;
-    }
-
-    .main-slider-box {
-        background-image: url(images/slider-img-mob.png);
-    }
-
     .menu {
         position: absolute;
         width: 100%;
@@ -1618,29 +1706,7 @@ footer a {
         padding-bottom: 10px;
         display: none;
     }
-
-    .header-top {
-        height: 90px;
-    }
-
-    .head-btn {
-        height: 48px;
-    }
-
-    .request-btn {
-        position: absolute;
-        right: 0;
-        top: 75px;
-        z-index: 20;
-    }
-
-    .special-btn {
-        position: absolute;
-        right: 0;
-        top: 26px;
-    }
-
-    .nav-container {
+     .nav-container {
         height: auto;
     }
 
@@ -1671,8 +1737,8 @@ footer a {
         background-repeat: no-repeat;
         background-position: -9px;
     }
-	.color-sub:after{
-		content: '';
+    .color-sub:after{
+        content: '';
         display: block;
         width: 12px;
         height: 11px;
@@ -1684,7 +1750,7 @@ footer a {
         top: 16px;
         background-repeat: no-repeat;
         background-position: 3px;
-	}
+    }
     .color-sub {
         color: #00d8c4 !important;
     }
@@ -1743,10 +1809,10 @@ footer a {
         background-color: #fff;
         color: #000;
     }
-	.drop-menu li span:first-child:after{
-		right: -270px;
-		top: 15px;
-	} 
+    .drop-menu li span:first-child:after{
+        right: -270px;
+        top: 15px;
+    } 
     .drop-menu-lvl-2 {
         position: static;
         background-color: #fff;
@@ -1792,6 +1858,96 @@ footer a {
         background-color: #00ab9b;
         height: 50px;
     }
+    .location-box{
+        display: none;
+    }
+    .request-btn{
+        margin-top: 7px;
+    }
+}
+
+/*media 860px*/
+
+@media screen and (max-width: 860px){
+    .subscribe-container{
+        flex-direction: column;
+    }
+    .subscribe-container form{
+        margin-top: 40px;
+    }
+}
+/*media 740px*/
+
+@media screen and (max-width: 740px){
+    .head-number{
+        font-size: 3.243vw;
+    }
+    .blog-container {
+        width: auto;
+        margin: auto;
+        margin-top: 20px;
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    
+    .blog-box , .blog-box:nth-child(2){
+        margin: 15px auto;
+    }
+    .BA-slider{
+        margin-top: 40px;
+    }
+    .foo-cont{
+        flex-direction: column;
+    }
+    .foo-cont p{
+        display: none;
+    }
+    
+}
+
+/*media 480*/
+
+@media screen and (max-width: 480px) {
+    
+
+    .locaction-btn,
+    .head-number,
+    .google-box-info,
+    .procedures-gallery:before,
+    .google-slider,
+    .modal-body-r,
+    .subscribe-container img {
+        display: none !important;
+    }
+
+    .main-slider-box {
+        background-image: url(images/slider-img-mob.png);
+    }
+
+    
+
+    .header-top {
+        height: 90px;
+    }
+
+    .head-btn {
+        height: 48px;
+    }
+
+    .request-btn {
+        position: absolute;
+        right: 0;
+        top: 55px;
+        z-index: 20;
+    }
+
+    .special-btn {
+        position: absolute;
+        right: 0;
+        top: 26px;
+    }
+
+   
 
     .main-slider {
         max-width: 480px;
@@ -1813,7 +1969,6 @@ footer a {
     }
     .procedures-container,
     .header-top,
-    .foo-cont,
     .blog-container,
     .elite-info-container,
     .procedures-right,
@@ -1833,9 +1988,7 @@ footer a {
     .subscribe-container form {
         width: 100%;
     }
-    /*.elite-info-container{
-        margin: 10px 0;
-    }*/
+
     .consultation-form input{
         width: 100%;
     }
@@ -1876,7 +2029,9 @@ footer a {
         max-width: 300px;
         margin: auto;
     }
-
+    .dr-info{
+        position: static;
+    }
     .dr-photo-box p {
         width: 178px;
         background-color: #fff;
@@ -1890,8 +2045,11 @@ footer a {
     .learn {
         padding-left: 60%;
         text-align: left;
+        position: static;
     }
-
+    .prod-tab{
+        flex-direction: column;
+    }
     .procedures-right {
         margin-top: 47px;
     }
@@ -1906,11 +2064,12 @@ footer a {
         margin-top: 4px;
         height: auto;
     }
-
     .elite-info-left {
         width: 100%;
     }
-
+    .elite-logo{
+        margin: auto;
+    }
     .elite-info-left p {
         padding-top: 8px;
     }
@@ -1941,11 +2100,14 @@ footer a {
         position: static;
         padding-right: 11px;
     }
-
-    .consultation-left {
-        margin: auto;
+    .google-slider{
         padding: 0 20px;
+        box-sizing: border-box;
     }
+    /*.consultation-left {
+        margin: auto;
+        padding: 0 20px !important;
+    }*/
 
     .elite-info-left h2:before {
         width: 48px;
@@ -1964,6 +2126,7 @@ footer a {
     .elite-info-right {
         padding-top: 48px;
         margin-right: 0;
+        margin-left: 0;
     }
 
     .consultation-left form {
@@ -1971,17 +2134,9 @@ footer a {
         padding-right: 40px;
     }
 
-    .blog-box:nth-child(2) {
-        margin-top: 40px;
-        margin-left: 0;
-    }
+    
 
-    .blog-container {
-        width: auto;
-        margin: auto;
-        margin-top: 100px;
-        padding: 0 20px;
-    }
+    
 
     .blog-box {
         width: 100%;
@@ -2009,4 +2164,15 @@ footer a {
     footer h4 {
         padding: 0 25px;
     }
+}
+.procedures-gallery-box .gallery-box-info{
+    transition: .3s;
+}
+.procedures-gallery-box:hover .gallery-box-info{
+    width: 251px;
+    transition: .3s;
+}
+.procedures-gallery-box:hover .gallery-box-info h2{
+    text-decoration: underline;
+    transition: .3s;
 }

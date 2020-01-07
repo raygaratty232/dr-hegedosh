@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
 	$('.main-slider').slick({
 		fade: true,
@@ -22,14 +24,7 @@ $(document).ready(function(){
 		dotsClass : 'sl-dots'  
 	})
 
-	$('.calendar-block').slick({
-		arrows : true,
-		dots : false ,
-		easing : 'linear',
-		slidesToShow: 1,
-		prevArrow : '<button type="button" class="calendar-prev"><img src="images/arrow.png" alt=""></button>',
-		nextArrow : '<button type="button" class="calendar-next"><img src="images/arrow.png" alt=""></button>'
-	})
+	
 
 	$('#date').datepicker({
 		language : 'en'
@@ -45,26 +40,61 @@ $(document).ready(function(){
 
 	$('.learn').magnificPopup();
 
-	$('.request-btn').magnificPopup();
+
+	/*попап с формой и слайдером*/
+
+	$('.request-btn').magnificPopup({
+		callbacks: {
+    		open: function() {
+     				$('.calendar-block').slick({
+						arrows : true,
+						dots : false ,
+						easing : 'linear',
+						slidesToShow: 1,
+						prevArrow : '<button type="button" class="calendar-prev"><img src="images/arrow.png" alt=""></button>',
+						nextArrow : '<button type="button" class="calendar-next"><img src="images/arrow.png" alt=""></button>'
+					})
+    			}
+  
+  		}
+	});
 
 
-	
+	/*скрол блоков с временем*/
+
+
+
+	$('.scroller').each(function(){
+		
+		$(this).click(function(){
+            let parentBlock =  $(this).parent().find('.not-empty');
+            let countOfTimes = parentBlock.find('a').length;
+			if ( parseInt(parentBlock.css('margin-top')) == countOfTimes* -39){
+                parentBlock.css({
+                    'margin-top' : '0px'
+                })
+			}else {
+
+                parentBlock.css({
+                    'margin-top': '-=39'
+                })
+            }
+
+		})
+		
+	})
+
 
 	$('.btn-cancel').on( "click", function() {
   		$.magnificPopup.close();
 	});
 
 
-	$('.close-modal , .close-modal-btn').click(function(){
-		$('.dr-pop-container').hide()
-		$('.form-pop-container').hide()
-	})
-
  	$('.selectbox-out').click(function(){
  		$('.selectbox-menu').toggleClass('show-local')
  	})
 
-
+ 	
  	
 
 
@@ -122,7 +152,7 @@ $(document).ready(function(){
 
 
 	function windowSize(){
-	    if ($(window).width() <= 480){
+	    if ($(window).width() <= 980){
 	        $('.menu > .hover-desk').removeClass('hover-desk');
 	        $('.drop-menu > .btn-lvl-2').removeClass('btn-lvl-2');
 	        $('.drop-menu > .hover-desk').removeClass('hover-desk');
