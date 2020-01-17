@@ -44,7 +44,9 @@ $(document).ready(function(){
 
 	
 
-	$('.learn').magnificPopup();
+	$('.learn').magnificPopup({
+		type:'inline'
+	});
 
 
 	/*попап с формой и слайдером*/
@@ -135,20 +137,52 @@ $(document).ready(function(){
 		$(this).find($('.pm-box')).toggleClass('minus')
 	}
 
- 	/*photo-gallery*/
+ 	/*gallery*/
 
 
  	$('.photo-gallery-box').magnificPopup({
   		delegate: 'a', 
   		type: 'image'
-	});
-
-
-	/*pagination*/
-
-   
+	});   
 	
 
+ 	$('.video-gallery-box').magnificPopup({
+  		delegate: 'a', 
+  		type: 'iframe'
+	});   
+	
+ 	/*validation*/
+
+
+
+ 	var inp = $('.request-form').find('input');
+
+
+ 	$('.send-request').click(function(){
+ 		sendReq()
+ 	})
+
+ 	function sendReq(){
+ 		if(inp.val().length === 0){
+ 			$('.send-request').addClass('red-request')
+ 			$('.send-request').text('Please, fill in all form fields')
+ 		}			
+ 	}
+
+
+
+ 	var inp_name = $('.request-form').find('input[type="name"]').val()
+ 	var	inp_phone = $('.request-form').find('input[type="phone"]').val()
+ 	var	inp_mail = $('.request-form').find('input[type="email"]').val()
+
+ 	inp.each(function(){
+ 		inp.change(function(){
+			if(inp_name != ' ' && inp_phone !=' ' && inp_mail != ' ') {
+			 		$('.send-request').removeClass('red-request')
+			 		$('.send-request').text('Send request')
+			 	}
+ 		})
+ 	})
 
 
     $('#validate').validate({
@@ -178,9 +212,12 @@ $(document).ready(function(){
 	      		required: "We need your email address to contact you"
     		}
   		},
-
-  		
+	
 	});
+
+
+
+
 
 	$(function($){
 		$('[name="phone"]').mask("+7(999) 999-9999");
