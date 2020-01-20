@@ -2323,6 +2323,7 @@ footer a {
 }
 .photo-gallery-container{
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 .photo-gallery-box{
     display: flex;
@@ -2350,7 +2351,8 @@ footer a {
     background-color: #fff;
 }
 .photo-gallery-block{
-    
+    width: 100%;
+    order: 1;
 }
 .pg-arrow-l , .pg-arrow-r{
     width: 6px;
@@ -3584,7 +3586,7 @@ footer a {
     }
     .photo-gallery-slider{
         margin-top: 20px;
-        top: -900px;
+        order: 3;
         min-height: auto;
         margin-right: 20px;
         margin-left: 20px;
@@ -3593,6 +3595,7 @@ footer a {
         width: 100%;
         margin: auto;
         margin-top: 350px;
+        order: 2;
     }
     .pg-before-after h3:after{
         width: 192px;
