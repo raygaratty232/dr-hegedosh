@@ -2351,8 +2351,7 @@ footer a {
     background-color: #fff;
 }
 .photo-gallery-block{
-    width: 100%;
-    order: 1;
+   
 }
 .pg-arrow-l , .pg-arrow-r{
     width: 6px;
@@ -2474,7 +2473,7 @@ footer a {
 /*photo-gallery-style-end*/
 
 
-/*video-gallery-style-stert*/
+/*video-gallery-style-start*/
 
 
 
@@ -3548,6 +3547,10 @@ footer a {
     .photo-gallery-list{
         width: 290px;
     }
+    .photo-gallery-block{
+        width: 100%;
+        order: 1;
+    }
     .photo-gallery-list li{
         width: 32px;
         height: 32px;
@@ -3588,8 +3591,6 @@ footer a {
         margin-top: 20px;
         order: 2;
         min-height: auto;
-        margin-right: 20px;
-        margin-left: 20px;
         width: 100%;
     }
     .also-category{
