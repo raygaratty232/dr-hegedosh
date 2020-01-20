@@ -2425,6 +2425,9 @@ footer a {
 .pg-box-img{
     display: flex;
 }
+.pg-box-img img{
+    width: 50%;
+}
 .pg-before-after h3:after{
     content: '';
     display: block;
@@ -2442,7 +2445,7 @@ footer a {
     padding-right: 7px;
 }
 .photo-gallery-slider{
-    max-width: 1121px;
+    max-width: 1105px;
     min-height: 491px;
     margin: auto;
     margin-top: 160px;
