@@ -3582,20 +3582,19 @@ footer a {
         margin: 0;
     }
     .slick-slide img{
-        width: 100%;
+        
     }
     .photo-gallery-slider{
         margin-top: 20px;
-        order: 3;
+        order: 2;
         min-height: auto;
         margin-right: 20px;
         margin-left: 20px;
+        width: 100%;
     }
     .also-category{
         width: 100%;
-        margin: auto;
-        margin-top: 350px;
-        order: 2;
+        order: 3;
     }
     .pg-before-after h3:after{
         width: 192px;
