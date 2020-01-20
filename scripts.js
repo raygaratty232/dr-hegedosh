@@ -241,7 +241,7 @@ $(document).ready(function(){
 
 
 	function windowSize(){
-	    if ($(window).width() <= 980){
+	    if ($(window).width() <= 1080){
 	        $('.menu > .hover-desk').removeClass('hover-desk');
 	        $('.drop-menu > .btn-lvl-2').removeClass('btn-lvl-2');	
 	        $('.drop-menu > .hover-desk').removeClass('hover-desk');
