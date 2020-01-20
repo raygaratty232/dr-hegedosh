@@ -2351,8 +2351,7 @@ footer a {
     background-color: #fff;
 }
 .photo-gallery-block{
-    width: 100%;
-    order: 1;
+   
 }
 .pg-arrow-l , .pg-arrow-r{
     width: 6px;
