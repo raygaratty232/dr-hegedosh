@@ -2355,24 +2355,24 @@ footer a {
 .pg-arrow-l , .pg-arrow-r{
     width: 6px;
     height: 9px;
-    position: absolute;
-    top: 20px;
+    margin-top: 20px;
 }
 .pg-arrow-l{
     left: 140px;
+    margin-right: 20px;
 }
 .pg-arrow-r{
     transform: rotate(180deg);
-    right: 140px;
+    margin-left: 20px;
 }
 .pg-list-block{
     display: flex;
     position: relative;
+    justify-content: center;
 }
 .photo-gallery-list{
     display: flex;
     width:  462px;
-    margin: auto;
     justify-content: space-between;
 }
 .pg-active{
@@ -2822,6 +2822,11 @@ footer a {
         position: absolute;
         bottom: 0;
     }
+    .menu > li{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+   
     .procedures-right , .procedures-gallery{
         width: 100%;
     }
@@ -3188,7 +3193,6 @@ footer a {
         top: 26px;
     }
 
-   
 
     .main-slider {
         max-width: 480px;
@@ -3576,8 +3580,8 @@ footer a {
         width: 100%;
     }
     .photo-gallery-slider{
-        margin-top: 0;
-        top: -860px;
+        margin-top: 20px;
+        top: -900px;
         min-height: auto;
         margin-right: 20px;
         margin-left: 20px;
@@ -3585,7 +3589,7 @@ footer a {
     .also-category{
         width: 100%;
         margin: auto;
-        margin-top: 320px;
+        margin-top: 350px;
     }
     .pg-before-after h3:after{
         width: 192px;
