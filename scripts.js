@@ -120,6 +120,10 @@ $(document).ready(function(){
    		e.preventDefault();
 	}
 
+
+	
+
+
  	/*faq-accardion*/
 
 
@@ -130,7 +134,6 @@ $(document).ready(function(){
 	function f_acc(){
   		$('.faq-accordeon > .faq-acc-box > .faq-acc-body').not($(this).next()).slideUp(500);
    		$(this).next().slideToggle(500);
-
 	}
 
 	function f_ico(){
@@ -160,27 +163,40 @@ $(document).ready(function(){
 
  	$('.send-request').click(function(){
  		sendReq()
+ 		err()
  	})
 
  	function sendReq(){
  		if(inp.val().length === 0){
  			$('.send-request').addClass('red-request')
  			$('.send-request').text('Please, fill in all form fields')
- 		}			
+ 		}	
+ 		else{
+ 			$('.send-request').removeClass('red-request')
+			 $('.send-request').text('Send request')
+ 		}		
  	}
-
-
 
  	var inp_name = $('.request-form').find('input[type="name"]').val()
  	var	inp_phone = $('.request-form').find('input[type="phone"]').val()
  	var	inp_mail = $('.request-form').find('input[type="email"]').val()
 
+
+
+ 	function err(){
+ 		$('.request-form > span').each(function(elem){
+ 			elem.addClass('.req-form-err-text')
+ 			console.log(elem)
+ 		})
+ 	}
+ 	
+
+
  	inp.each(function(){
  		inp.change(function(){
-			if(inp_name != ' ' && inp_phone !=' ' && inp_mail != ' ') {
-			 		$('.send-request').removeClass('red-request')
-			 		$('.send-request').text('Send request')
-			 	}
+			if(inp_name == ' ' && inp_phone ==' ' && inp_mail == ' ') {
+			 		err()
+			}
  		})
  	})
 
@@ -239,12 +255,14 @@ $(document).ready(function(){
 		
 	})
 
+	
 
 	function windowSize(){
 	    if ($(window).width() <= 1080){
 	        $('.menu > .hover-desk').removeClass('hover-desk');
 	        $('.drop-menu > .btn-lvl-2').removeClass('btn-lvl-2');	
 	        $('.drop-menu > .hover-desk').removeClass('hover-desk');
+	        $('.drop-menu > li > a').removeClass('item-link');
 	        $('.menu  span').click(function(){
 	 		$(this).toggleClass('color-sub')
 		 		if($('.menu span').hasClass('color-sub')){
@@ -262,7 +280,8 @@ $(document).ready(function(){
 	    } 
 	}
 
-	$(window).on('load resize',windowSize);
+	windowSize()
+	
 
 
 	 (function( $ ) {
